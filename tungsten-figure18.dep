@@ -1,0 +1,7 @@
+tungsten-figure18.pdf: data/step_response/original.txt
+tungsten-figure18.pdf: data/step_response/deconvoluted070.txt
+tungsten-figure18.pdf: data/step_response/deconvoluted075.txt
+tungsten-figure18.pdf: data/step_response/deconvoluted080.txt
+tungsten-figure18.pdf: data/step_response/deconvoluted085.txt
+tungsten-figure18.pdf: data/step_response/deconvoluted090.txt
+tungsten-figure18.pdf: data/step_response/deconvoluted095.txt
