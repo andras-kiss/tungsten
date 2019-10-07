@@ -1,4 +1,5 @@
-\documentclass[manuscript=article]{achemso}
+\documentclass[manuscript=article, journal=jceda8]{achemso}
+%\documentclass[journal = jacsat]{achemso}
 \usepackage{chemformula} % Formula subscripts using \ch{}
 \usepackage[T1]{fontenc} % Use modern font encodings
 \usepackage[utf8]{inputenc}
@@ -23,7 +24,7 @@
 \affiliation{Department of General and Physical Chemistry, University of Pécs, Ifjúság útja 6, 7622 Pécs, Hungary}
 \author{Géza Nagy}
 \affiliation{Department of General and Physical Chemistry, University of Pécs, Ifjúság útja 6, 7622 Pécs, Hungary}
-\title{pH sensitive electrode from an incandescent light--bulb}
+\title{An inexpensive pH sensitive electrode made from the tungsten filament of an incandescent light--bulb}
 \keywords{pH, electrode, tungsten, light--bulb, potentiometry}
 
 
@@ -34,6 +35,22 @@ A simple and robust pH sensitive electrode is presented that can be constructed 
 \end{abstract}
 
 \section{Introduction}
+
+pH is one of the most important analytical parameters, therefore a lot of work has been devoted even just to define it. The original definition \cite{sorensen1909messung} was layed down by S\o rensen in 1909, as the negative logarithm of the concentration of H$_3$O$^+$:
+
+\begin{equation}
+\textrm{pH} = -\lg c_{\textrm{H}_3\textrm{O}^+}
+\end{equation}
+
+This however, is not entirely true, because pH depends on the \emph{activity} of H$_3$O$^+$, rather than its concentration:
+
+\begin{equation}
+\textrm{pH} = -\lg a_{\textrm{H}_3\textrm{O}^+}
+\end{equation}
+
+where $a_{H_3 O^{+}}$ is the activity coefficient of H$_3$O$^+$ ions. This definition however raises a problem. It includes the activity coefficient of a single ion, which cannot be measured independently. Researchers in the late 40s and early 50s solved this problem by defining pH on an instrumental basis, which was summarized by Bates and Guggenheim in 1960 \cite{bates1960report}. Since then, several revisions have been published by IUPAC, the most recent being \cite{covington2002measurement}. The current definition that is described there is based in the \emph{Harned cell}, that is a 
+
+Since then, the definition has been 
 Analytical potentiometry started with the discovery and development of the glass pH-electrode. It is the best electrochemical sensor, and one of the best sensors ever made, with a linear response for over more than 13 orders of magnitude, and excellent selectivity.
 It was in 1906, when a botanist named Max Cremer discovered that the potential difference across a thin glass membrane is a function of pH when opposite sides of the membrane are in contact with solutions containing different concentrations of H$_3$O$^+$ \cite{cremer1906ursache, cremer1906direkte}.
 Three years later, in 1909, S\o rensen introduced the concept of pH \cite{sorensen1909messung}.
