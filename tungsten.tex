@@ -35,20 +35,42 @@ A simple and robust pH sensitive electrode is presented that can be constructed 
 \end{abstract}
 
 \section{Introduction}
+
+
 pH is one of the most important concepts in chemistry, originally defined by S\o rensen in 1909 \cite{sorensen1909messung} as the negative logarithm of the concentration of hydrogen ion:
 
 \begin{equation}
 \textrm{pH} = -\log_{10} c_{\textrm{H}^+}
 \end{equation}
 
-At first glance, it looks like a deceptively simple concept. Complications around this definition start to arise when we replace concentration with activity, taking into account that hydrogen ions have charge, therefore their behaviour correlates more closely with activity rather than concentration:
+At first glance, it looks like a deceptively simple concept. Complications around this definition start to arise when we replace concentration with activity, taking into account that hydrogen ions have charge, therefore their behaviour correlates more closely with activity than concentration:
 
 \begin{equation}
 \textrm{pH} = -\log_{10} a_{\textrm{H}^+} = -\log_{10} c_{\textrm{H}^+} \gamma_{H^+}
 \end{equation}
 
-where $a_{H^+}$ is the activity and $\gamma_{H^+}$ is the activity coefficient of hydrogen ions. This definition however raises a new problem. It includes the activity coefficient of a single ion, which is unmeasurable. Even though the Debye--Hückel equation can be used to calculate a theoretical activity coefficient for a single ion, the prevailing view is that if it cannot be measured, than a pH definition that is based on that activity coefficient is an unmeasurable quantity. This logical difficulty was summarized by Bates and Guggenheim in 1960 \cite{bates1960report}. Their recommended solution was to use 
+where $a_{H^+}$ is the activity and $\gamma_{H^+}$ is the activity coefficient of hydrogen ions. This definition however raises a new problem. It includes the activity coefficient of a single ion, which is unmeasurable. It is possible to measure the \emph{mean activity coefficient} only, for example in the case of HCl solution:
 
+\begin{equation}
+\gamma_{H^+, Cl^-} = \sqrt{\gamma_{H^+} \gamma_{Cl^-}}
+\end{equation}
+
+
+Even though the Debye--Hückel equation can be used to calculate a theoretical activity coefficient for a single ion, the prevailing view is that if it cannot be measured, than a pH definition that is based on that activity coefficient is an unmeasurable quantity. This logical difficulty was summarized by Bates and Guggenheim in 1960 \cite{bates1960report}. 
+
+Their recommended solution was a convention -- since then it has been known as the \emph{Bates--Guggenheim convention} --, in which the activity of a chosen ionic species is defined using the Debye--Hückel equation, and the rest is calculated using the theoretically obtained value for the single ionic species and the experimentally determined mean activity coefficient. The chosen ion is chloride ion. For instance, the activity coefficient of hydrogen ion can be calculated as:
+
+\begin{equation}
+\gamma_{H^+} = \frac{\gamma_{H^+, Cl^-}^2}{\gamma_{Cl^-}}
+\end{equation}
+
+This convention has been the basis for the IUPAC (International Union of Pure and Applied Chemistry) recommendation to define pH in 1985 \cite{covington1985definition} and 2002 \cite{buck2002measurement}, which is currently the most up to date definition from IUPAC:
+
+\begin{equation}
+\textrm{pH}= -\log_{10}a_{H^+} = -\log_{10}(m_{H^+} \gamma_{m, H^+}/m^\theta)
+\end{equation}
+
+where $m_{H^+}$ is the molality and $\gamma_{m, H^+}$ is the molality based activity coefficient of hydrogen ions, $m^\theta$ is the standard molality (1 mol kg$^{-1}$). The activity coefficient of hydrogen ions in the above equation is calculated using the Bates--Guggenheim convention.
 
 
    might be meaninglesssince it cannot be verified experimentally, Researchers in the late 40s and early 50s solved this problem by defining pH on an instrumental basis, which was summarized by Bates and Guggenheim in 1960 \cite{bates1960report}. Since then, several revisions have been published by IUPAC, the most recent being \cite{covington2002measurement}. The current definition that is described there is based in the \emph{Harned cell}, that is a 
