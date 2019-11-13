@@ -1,3 +1,5 @@
-tungsten-figure3.pdf: data/pH_linescans/500ms.txt
-tungsten-figure3.pdf: data/pH_linescans/1000ms.txt
-tungsten-figure3.pdf: data/pH_linescans/5000ms.txt
+tungsten-figure3.pdf: data/calibration/izzo_h.txt
+tungsten-figure3.pdf: data/calibration/izzo_na.txt
+tungsten-figure3.pdf: data/calibration/izzo_k.txt
+tungsten-figure3.pdf: data/calibration/izzo_mg.txt
+tungsten-figure3.pdf: data/calibration/izzo_ca.txt

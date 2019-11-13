@@ -1,1 +1,3 @@
-tungsten-figure0.pdf: data/transient_aligned.txt
+tungsten-figure0.pdf: data/calibration/uveg.txt
+tungsten-figure0.pdf: data/calibration/sigma.txt
+tungsten-figure0.pdf: data/calibration/izzo.txt

@@ -1,3 +1,0 @@
-tungsten-figure4.pdf: data/pH_linescans/500ms_deconvoluted.txt
-tungsten-figure4.pdf: data/pH_linescans/1000ms_deconvoluted.txt
-tungsten-figure4.pdf: data/pH_linescans/5000ms_deconvoluted.txt
