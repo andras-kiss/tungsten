@@ -22,8 +22,8 @@
 \email{akiss@gamma.ttk.pte.hu}
 \author{János Klucsik}
 \affiliation{Department of General and Physical Chemistry, University of Pécs, Ifjúság útja 6, 7622 Pécs, Hungary}
-\author{Géza Nagy}
-\affiliation{Department of General and Physical Chemistry, University of Pécs, Ifjúság útja 6, 7622 Pécs, Hungary}
+%\author{Géza Nagy}
+%\affiliation{Department of General and Physical Chemistry, University of Pécs, Ifjúság útja 6, 7622 Pécs, Hungary}
 \title{A simple and inexpensive pH electrode made from the tungsten filament of an incandescent light--bulb}
 \keywords{pH, electrode, tungsten, light--bulb, potentiometry}
 
@@ -35,97 +35,56 @@ A simple and robust pH sensitive electrode is presented that can be constructed 
 \end{abstract}
 
 \section{Introduction}
+
+
 pH is one of the most important concepts in chemistry, originally defined by S\o rensen in 1909 \cite{sorensen1909messung} as the negative logarithm of the concentration of hydrogen ion:
 
 \begin{equation}
 \textrm{pH} = -\log_{10} c_{\textrm{H}^+}
 \end{equation}
 
-At first glance, it looks like a deceptively simple concept. Complications around this definition start to arise when we replace concentration with activity, taking into account that hydrogen ions have charge, therefore their behaviour correlates more closely with activity rather than concentration:
+At first glance, it looks like a deceptively simple concept. Complications around this definition start to arise when we replace concentration with activity, taking into account that hydrogen ions have charge, therefore their behaviour correlates more closely with activity than concentration:
 
 \begin{equation}
 \textrm{pH} = -\log_{10} a_{\textrm{H}^+} = -\log_{10} c_{\textrm{H}^+} \gamma_{H^+}
 \end{equation}
 
-where $a_{H^+}$ is the activity and $\gamma_{H^+}$ is the activity coefficient of hydrogen ions. This definition however raises a new problem. It includes the activity coefficient of a single ion, which is unmeasurable. Even though the Debye--Hückel equation can be used to calculate a theoretical activity coefficient for a single ion, the prevailing view is that if it cannot be measured, than a pH definition that is based on that activity coefficient is an unmeasurable quantity. This logical difficulty was summarized by Bates and Guggenheim in 1960 \cite{bates1960report}. Their recommended solution was to use 
-
-
-
-   might be meaninglesssince it cannot be verified experimentally, Researchers in the late 40s and early 50s solved this problem by defining pH on an instrumental basis, which was summarized by Bates and Guggenheim in 1960 \cite{bates1960report}. Since then, several revisions have been published by IUPAC, the most recent being \cite{covington2002measurement}. The current definition that is described there is based in the \emph{Harned cell}, that is a 
-
-Since then, the definition has been 
-Analytical potentiometry started with the discovery and development of the glass pH-electrode. It is the best electrochemical sensor, and one of the best sensors ever made, with a linear response for over more than 13 orders of magnitude, and excellent selectivity.
-It was in 1906, when a botanist named Max Cremer discovered that the potential difference across a thin glass membrane is a function of pH when opposite sides of the membrane are in contact with solutions containing different concentrations of H$_3$O$^+$ \cite{cremer1906ursache, cremer1906direkte}.
-Three years later, in 1909, S\o rensen introduced the concept of pH \cite{sorensen1909messung}.
-He defined it as the negative logarithm of the concentration of H$_3$O$^+$:
+where $a_{H^+}$ is the activity and $\gamma_{H^+}$ is the activity coefficient of hydrogen ions. This definition however raises another problem. It includes the activity coefficient of a single ion, which is unmeasurable. It is possible to measure the \emph{mean activity coefficient} only, for example in the case of HCl solution:
 
 \begin{equation}
-\textrm{pH} = -\lg c_{\textrm{H}_3\textrm{O}^+}
+\gamma_{H^+, Cl^-} = \sqrt{\gamma_{H^+} \gamma_{Cl^-}}
 \end{equation}
 
-This however, is not entirely true, because pH depends on the \emph{activity} of H$_3$O$^+$, rather than its concentration:
+
+Even though the Debye--Hückel equation can be used to calculate a theoretical activity coefficient for a single ion, the prevailing view is that if it cannot be measured, than a pH definition that is based on that activity coefficient is an unmeasurable quantity. This logical difficulty was summarized by Bates and Guggenheim in 1960 \cite{bates1960report}. 
+
+Their recommended solution was a convention -- since then it has been known as the \emph{Bates--Guggenheim convention} --, in which the activity of a chosen ionic species is defined using the Debye--Hückel equation, and the rest is calculated using the theoretically obtained value for the single ionic species and the experimentally determined mean activity coefficient. The chosen ion is chloride ion. For instance, the activity coefficient of hydrogen ion can be calculated as:
 
 \begin{equation}
-\textrm{pH} = -\lg a_{\textrm{H}_3\textrm{O}^+}
+\gamma_{H^+} = \frac{\gamma_{H^+, Cl^-}^2}{\gamma_{Cl^-}}
 \end{equation}
 
-And since pH is dimensionless, a better way to define pH is:
+This convention has been the basis for the IUPAC (International Union of Pure and Applied Chemistry) recommendation to define pH in 1985 \cite{covington1985definition} and 2002 \cite{buck2002measurement}, which is currently the most up to date definition from IUPAC:
 
 \begin{equation}
-\textrm{pH} = -\lg(\gamma_{\textrm{H}_3\textrm{O}^+} m_{\textrm{H}_3\textrm{O}^+} / m^\theta)
+\textrm{pH}= -\log_{10}a_{H^+} = -\log_{10}(m_{H^+} \gamma_{m, H^+}/m^\theta)
 \end{equation}
 
-or
+where $m_{H^+}$ is the molality and $\gamma_{m, H^+}$ is the molality based activity coefficient of hydrogen ions, $m^\theta$ is the standard molality (1 mol kg$^{-1}$). The activity coefficient of hydrogen ions in the above equation is calculated using the Bates--Guggenheim convention.
 
-\begin{equation}
-\textrm{pH} = -\lg(\gamma_{\textrm{H}_3\textrm{O}^+} c_{\textrm{H}_3\textrm{O}^+} / c^\theta)
-\end{equation}
 
-where $m^\theta$ = 1 mol$\cdot$kg$^{-1}$ and $c^\theta$ = 1 mol$\cdot$dm$^{-3}$ are the standard states, and $\gamma_{\textrm{H}_3\textrm{O}^+}$ is the activity coefficient of H$_3$O$^+$. 
 
-The current, internationally accepted definition of pH is an instrumental definition, based on an electrochemical cell known as the \emph{Harned Cell} \cite{harned1958activity}.
-To measure the pH in such a cell, a conventional procedure was developed at NBS (National Bureau of Standards) \cite{durst1975standardization} and recommended at present by the last IUPAC (International Union of Pure and Applied Chemistry) Recommendations \cite{covington2002measurement}.
+
+The electrochemical cell used in the measurement of the primary pH standards is known as the \emph{Harned Cell} \cite{harned1958activity}.
+To measure the pH in such a cell, a conventional procedure was developed at NBS (National Bureau of Standards) \cite{durst1975standardization} and recommended at present by the last IUPAC recommendations \cite{covington2002measurement}.
 NIST (National Institute of Standards and Technology) in the U.S. and PTB (Physikalisch-Technische Bundesanstalt) in Germany have presented pH values using the Harned Cell. 
 
-The Harned Cell is described by the following cell diagram: 
 
-\begin{equation}
-\textrm{Pt(s) | H}_2\textrm{(g) | buffer solution, Cl}^-\textrm{(aq) | AgCl(s) | Ag(s)}
-\label{eq:harned}
-\end{equation}
-
-To calculate the potential of the half-cells, the \emph{Nernst-equation} can be used:
-
-\begin{equation}
-E = E^\theta - \frac{RT}{z_iF}\ln a_i
-\end{equation}
-
-where $E^\theta$ is the standard potential difference of the cell, $R$ the universal gas constant, $F$ the Faraday constant, $T$ the thermodynamic temperature, $z_i$ is the valence and $a_i$ is the activity of ion species $i$.
-The potential difference $E$ of the cell \ref{eq:harned} is described by the \emph{Nernst-equation} as:
-
-\begin{equation}
-E = E^\theta - \frac{RT\ln 10}{F}\lg\bigg(\frac{a_{\textrm{H}_3\textrm{O}^+}m_{\textrm{Cl}^-}\gamma_{\textrm{Cl}^-}}{m^\theta}\bigg)
-\end{equation}
-
-After expressing the pH:
-
-\begin{equation}
-\textrm{p}(a_{\textrm{H}_3\textrm{O}^+}\gamma_{\textrm{Cl}^-}) = -\lg(a_{\textrm{H}_3\textrm{O}^+}\gamma_{\textrm{Cl}^-}) = \frac{E - E^\theta}{(RT/F)\ln10} + \lg \bigg(\frac{m_{\textrm{Cl}^-}}{m^\theta}\bigg)
-\end{equation}
-
-where $\gamma_{\textrm{Cl}^-}$ is the molal activity coefficient of the chloride ions at the molality $m_{\textrm{Cl}^-}$.
-
-By extrapolating on the equation obtained with least square fitting, the value of the acidity function at zero chloride ion molality p$a_0$ = $-$lg($a_{\textrm{H}^+} \gamma _{\textrm{Cl}^-})m_{\textrm{Cl}^- \to 0}$ can be determined.
-Applying the Bates -- Guggenheim convention \cite{bates1960report}, the trace activity coefficient of chloride ions $\gamma_{\textrm{Cl}^- \to 0}$ at $m_{\textrm{Cl}^- \to 0}$ can be calculated:
-
-\begin{equation}
-\lg \gamma_{\textrm{Cl}^- \to 0} = \frac{A I^{1/2}}{1 + 1.5I^{1/2}}
-\end{equation}
-
-where $A$ is the Debye-Hückel temperature-dependent limiting slope and $I$ the ionic strength of the buffer solution calculated by $I = (1/2) \Sigma c_i z_{i}^{2}$, where $c_i$ and $z_i$ are the molar concentration and electric charge of ionic species $i$.
-
+METHODS TO MEASURE pH
 Haber and Klemensiewicz gave a full account of the response of the glass electrode in their 1909 paper \cite{haber1909elektrische, haber1909concerning}.
 
+
+WHY ARE METAL/METAL-OXIDE pH ELECTRODES USEFUL
 There are certain applications where the use of a glass electrode might be challenging or impossible.
 These include measuring pH at high temperature or in hydrogen--fluoride solution, or application in the food industry. 
 
@@ -164,10 +123,32 @@ Another very popular metal/metal-oxide electrode used for pH measurements is the
         \ce{W_{(s)} + 2H_2O <=> WO_2 + 4H^+ + 4e^-}
 \end{equation}
 
+TUNGSTEN ELECTRODE REACTIONS:
 
+
+
+
+\begin{align}
+\ce {W + 2 H2O &-> WO2 + 4 H^+ + 4 e^-}\\
+\ce {W + 3 H2O &-> WO3 + 6 H^+ + 6 e^-}\\
+\ce {4W + 12 H2O &-> W4O12 + 24 H^+ + 24 e^-}\\
+\ce {W + 4 H2O &-> H2WO4 + 6 H^+ + 6 e^-}\\
+\ce {WO2 + H2O &-> WO3 + 2 H^+ + 2 e^-}\\
+\ce {WO2 + 2 H2O &-> H2WO4 + 2 H^+ + 2 e^-}
+\end{align}
+
+In this paper the construction and usage of a simple and inexpensive tungsten pH sensitive electrode is presented. The electrode can be assembled in a highschool chemistry laboratory by students and it can be used as an aid to demonstrate pH, ion-selective electrodes and metal/metal-oxide type electrodes in particular. The necessary parts can be obtained from a local hardware store or even a supermarket.
 
 
 \section{Materials and Methods}
+
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth]{img/plexi.jpg}
+\caption{...}
+\label{fig:plexi}
+\end{figure}
 
 Since tungsten has the highest melting point of all the elements (3422 $\celsius$), the method described in the previous paragraph cannot be used.
 A tungsten microwire with a diameter of $30~\upmu$m (Element-explorer, Montreal, Canada) were sealed into a borosilicate glass capillary ($d_i=1.12~$mm, $d_o=2~$mm, no filament, World Precision Inc., Sarasota, Florida, USA).
@@ -180,17 +161,114 @@ The solder was melted in flame, and pushed down to the sealed end of the capilla
 While the solder was still melted, a copper wire was insterted into the solder.
 After the solder had cooled down, the electrodes were ready to be used.
 Microelectrodes with $30~\upmu$m tungsten filaments from a 100$~$W Tungsram incandescent lightbulb were also prepared, using the same method.
-Fig. \ref{fig:tungsten_electrode} shows the tip of the finished tungsten microelectrodes.
+
+
+
+
+\section{Results}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.9\textwidth]{img/sb_top.jpg}
-\includegraphics[width=0.45\textwidth]{img/wolfram_electrode1.jpg}\includegraphics[width=0.45\textwidth]{img/wolfram_electrode2.jpg}
+\begin{tikzpicture}
+\begin{axis}	[
+		%legend style={draw=none},
+		legend style={draw=none, at={(0.5,0.98)}, anchor=north},
+		%legend style=draw=none, at={(0.5,-0.1)}, anchor=north
+		xmin=0,
+		xmax=3060,
+		ymin=-400,
+		ymax=200,
+		width=12cm,
+		height=8cm,
+		xlabel=t / s,
+		ylabel=E vs. Ag/AgCl/KCl(3 M) / mV
+		%ytick={-0.31, -0.3, -0.29, -0.28, -0.27},
+		%/pgf/number format/.cd, use comma, 1000 sep={}
+		]
+\addplot [color=blue] table {data/calibration/uveg.txt};
+\addplot [color=red] table {data/calibration/sigma.txt};
+\addplot [color=green] table {data/calibration/izzo.txt};
+\addlegendentry{Üvegelektród}
+\addlegendentry{Volfrámelektród}
+\addlegendentry{Izzószálelektród}
+%\node[anchor=north west] at (rel axis cs:0.02,0.98) {A};
+\end{axis}
+\end{tikzpicture}
+\caption{A két volfrám mikroelektród kalibrációs mérései. Összehasonlításképpen egy üvegelektród egyidejűleg mért potenciál--idő mérését is ábrázoltam. A potenciált mindhárom elektród esetében az üvegelektród belső, Ag/AgCl/KCl (3 M) referencia félcellájához képest mértem egy kellően nagy bemeneti impedanciájú feszültségmérő (eDAQ isopod EPU) felhasználásával.}
+\label{fig:kalibracios_meres}
+\end{figure}
 
-\caption[Antimony and tungsten microelectrodes for local pH measurements.]{(A) Antimony and (B, C) tungsten microelectrodes for local pH measurements.
-(B) Side view of the microelectrode prepared from a 100 W Tungsram filament.
-(C) Front view of the same electrode.}
-\label{fig:tungsten_electrode}
+
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
+	xmin=0.5, xmax=10, width=7cm,height=7cm,xlabel=pKATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV}, clip marker paths=true, xtick = {0,1,2,3,4,5,6,7,8,9,10}, xminorticks=true, minor x tick num = 1]
+\addplot [only marks, domain=0:5.5, mark=*, color=red] table {data/calibration/uveg_h.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=blue] table {data/calibration/uveg_na.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=green] table {data/calibration/uveg_k.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=black] table {data/calibration/uveg_mg.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=purple] table {data/calibration/uveg_ca.txt};
+%\addplot [domain=0:3, samples=500, line width=0.1mm] {86.8-x*29.12};
+\addlegendentry{H$^+$} 
+\addlegendentry{Na$^+$}
+\addlegendentry{K$^+$}
+\addlegendentry{Mg$^{2+}$}
+\addlegendentry{Ca$^{2+}$}
+\node[anchor=north east] at (rel axis cs:0.98,0.98) {A};
+\node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 54.788 mV / pH};
+\node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.9998};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
+xmin=0.5, xmax=10, width=7cm,height=7cm,xlabel=pKATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV}, clip marker paths=true, xtick = {0,1,2,3,4,5,6,7,8,9,10}, xminorticks=true, minor x tick num = 1]
+\addplot [only marks, domain=0:5.5, mark=*, color=red] table {data/calibration/sigma_h.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=blue] table {data/calibration/sigma_na.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=green] table {data/calibration/sigma_k.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=black] table {data/calibration/sigma_mg.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=purple] table {data/calibration/sigma_ca.txt};
+%\addplot [domain=0:3, samples=500, line width=0.1mm] {86.8-x*29.12};
+\addlegendentry{H$^+$} 
+\addlegendentry{Na$^+$}
+\addlegendentry{K$^+$}
+\addlegendentry{Mg$^{2+}$}
+\addlegendentry{Ca$^{2+}$}
+\node[anchor=north east] at (rel axis cs:0.98,0.98) {B};
+\node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 51.157 mV / pH};
+\node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.9986};
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis}[
+	legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
+	xmin=0.5, xmax=10,
+	width=7cm,height=7cm,
+	xlabel=pKATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV},
+	clip marker paths=true,
+	xtick = {0,1,2,3,4,5,6,7,8,9,10}, xminorticks=true, minor x tick num = 1]
+\addplot [only marks, domain=0:5.5, mark=*, color=red] table {data/calibration/izzo_h.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=blue] table {data/calibration/izzo_na.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=green] table {data/calibration/izzo_k.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=black] table {data/calibration/izzo_mg.txt};
+\addplot [only marks, domain=0:5.5, mark=*, color=purple] table {data/calibration/izzo_ca.txt};
+%\addplot [domain=0:3, samples=500, line width=0.1mm] {86.8-x*29.12};
+\addlegendentry{H$^+$} 
+\addlegendentry{Na$^+$}
+\addlegendentry{K$^+$}
+\addlegendentry{Mg$^{2+}$}
+\addlegendentry{Ca$^{2+}$}
+\node[anchor=north east] at (rel axis cs:0.98,0.98) {C};
+\node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 53.207 mV / pH};
+\node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.9817};
+\end{axis}
+\end{tikzpicture}
+\caption{(A) Üvegleketród (B) volfrámelektród (C) izzószálelektród kalibrációs egyenese, illetve szelektivitás-vizsgálata.}
+\label{fig:kalibracios_egyenes}
 \end{figure}
 
 		

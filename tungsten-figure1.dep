@@ -1,7 +1,5 @@
-tungsten-figure1.pdf: data/step_response/original.txt
-tungsten-figure1.pdf: data/step_response/deconvoluted070.txt
-tungsten-figure1.pdf: data/step_response/deconvoluted075.txt
-tungsten-figure1.pdf: data/step_response/deconvoluted080.txt
-tungsten-figure1.pdf: data/step_response/deconvoluted085.txt
-tungsten-figure1.pdf: data/step_response/deconvoluted090.txt
-tungsten-figure1.pdf: data/step_response/deconvoluted095.txt
+tungsten-figure1.pdf: data/calibration/uveg_h.txt
+tungsten-figure1.pdf: data/calibration/uveg_na.txt
+tungsten-figure1.pdf: data/calibration/uveg_k.txt
+tungsten-figure1.pdf: data/calibration/uveg_mg.txt
+tungsten-figure1.pdf: data/calibration/uveg_ca.txt
