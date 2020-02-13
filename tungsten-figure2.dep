@@ -1,5 +1,0 @@
-tungsten-figure2.pdf: data/calibration/sigma_h.txt
-tungsten-figure2.pdf: data/calibration/sigma_na.txt
-tungsten-figure2.pdf: data/calibration/sigma_k.txt
-tungsten-figure2.pdf: data/calibration/sigma_mg.txt
-tungsten-figure2.pdf: data/calibration/sigma_ca.txt

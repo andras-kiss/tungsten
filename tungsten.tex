@@ -15,27 +15,23 @@
 \tikzexternalize
 \newcommand*\mycommand[1]{\texttt{\emph{#1}}}
 
-
-\author{Venkat Rajat Rao Yalamarti}
+\author{János Klucsik}
 \affiliation{Department of General and Physical Chemistry, University of Pécs, Ifjúság útja 6, 7622 Pécs, Hungary}
 
-\author{János Klucsik}
+\author{Venkat Rajat Rao Yalamarti}
 \affiliation{Department of General and Physical Chemistry, University of Pécs, Ifjúság útja 6, 7622 Pécs, Hungary}
 
 \author{András Kiss}
 \affiliation{Department of General and Physical Chemistry, University of Pécs, Ifjúság útja 6, 7622 Pécs, Hungary}
 \email{akiss@gamma.ttk.pte.hu}
 
-%\author{Géza Nagy}
-%\affiliation{Department of General and Physical Chemistry, University of Pécs, Ifjúság útja 6, 7622 Pécs, Hungary}
-%\title{A simple and inexpensive pH electrode made from the tungsten filament of an incandescent light--bulb}
 \title{Demonstration of potentiometric pH determination using the filament of an incandescent lightbulb as indicator electrode}
 \keywords{pH, electrode, tungsten, light--bulb, potentiometry}
 
 
 \begin{document}
 \begin{abstract}
-One of the earliest concepts of chemistry taught in school is pH. It is usually introduced during the discussion of acids and bases. Students are taught to detect the acidity of substances using pH indicators, usually in the form of indicator paper. While this method is convenient and easy for students to relate to, it does not give any deeper insight into the meaning of pH. To truly comprehend pH, students need to learn to approach the concept from an electroanalytical point of view. The aim of this paper is to avail teachers of an interactive and demonstrative experiment in order to facilitate this transition. 
+One of the earliest concepts of chemistry taught in school is pH. It is usually introduced during the discussion of acids and bases. Students are taught to detect the acidity of substances using pH indicators, usually in the form of indicator paper. While this method is convenient and easy for students to relate to, it does not give any deeper insight into the meaning of pH. To truly comprehend pH, students need to learn to approach the concept from an electroanalytical point of view. The aim of this paper is to avail teachers of an interactive and demonstrative experiment in order to facilitate this transition.
 
 We demonstrate the fabrication of a simple and economical pH indicator electrode using simple household items. The sensing element is made from the filament of an incandescent lightbulb, that is sandwiched between two pieces of Plexiglass using superglue. 
 
@@ -86,11 +82,11 @@ To measure the pH in such a cell, a conventional procedure was developed at NBS 
 NIST (National Institute of Standards and Technology) in the U.S. and PTB (Physikalisch-Technische Bundesanstalt) in Germany have presented pH values using the Harned Cell. 
 
 In practice, pH is most commonly measured with a glass electrode.
-It has been known for more than a hundred years that the potential difference measured across  a glass membrane depends on the ratio of the hydrogen ion activity in the two solutions that the membrane separates \cite{haber1909elektrische, haber1909concerning}.
+It has been known for more than a hundred years that the potential difference measured across a glass membrane depends on the ratio of the hydrogen ion activity in the two solutions that the membrane separates \cite{haber1909elektrische, haber1909concerning}.
 The glass electrode is usually combined with a reference electrode for convenience.
 Such an electrode pair is called the \emph{,,combined glass electrode''}, and this the most common type the students might encounter.
 The glass electrode is the best electrochemical sensor and one of the best sensors ever made, with a linear response of over more than 13 orders of magnitude and excellent selectivity.
-However, it's not perfect. One of the imperfections is that although to a negligible extent, it responds to cations other the hydrogen ion.
+However, it's not perfect. One of the imperfections is that although to a negligible extent, it responds to cations other than hydrogen ion.
 This behaviour is described by the Nikolsky--equation that takes the effect of interfering ions into account with the so-called \emph{,,selectivity coefficient''} \cite{nicolsky1937theory}:
 
 \begin{equation}
@@ -122,6 +118,11 @@ Another very popular metal/metal-oxide electrode used for pH measurements is the
 In this paper the construction and usage of a simple and inexpensive tungsten pH sensitive electrode is presented. The electrode can be assembled in a highschool or undergraduate chemistry laboratory by students and it can be used as an aid to demonstrate pH and ion-selective electrodes. The excercise can also be useful as an introduction to the IUPAC definition of pH, since it is closely intertwined with the potentiometric determination of pH.
 
 
+we must mention j. of chem. ed. papers here about economical and interesting pH electrodes and their use in demonstrating potemtiometric pH determination.
+
+
+
+
 \section{Materials and Methods}
 
 \begin{figure}[!h]
@@ -131,62 +132,16 @@ In this paper the construction and usage of a simple and inexpensive tungsten pH
 \label{fig:plexi}
 \end{figure}
 
-Since tungsten has the highest melting point of all the elements (3422 $\celsius$), the method described in the previous paragraph cannot be used.
-A tungsten microwire with a diameter of $30~\upmu$m (Element-explorer, Montreal, Canada) were sealed into a borosilicate glass capillary ($d_i=1.12~$mm, $d_o=2~$mm, no filament, World Precision Inc., Sarasota, Florida, USA).
-To seal the microwire, one end of the capillary was closed with flame.
-Then, a 1$~$cm long tungsten microwire was inserted from the other end, and pushed down to the sealed end.
-The sealed end was melted again while vacuum was being applied from the open end.
-The capillary was kept in the flame until $4-5~$mm, about half of the microwire was sealed into the glass.
-To make electrical contact between the microwire and the measuring instruments, a small piece of solder was inserted into the capillary.
-The solder was melted in flame, and pushed down to the sealed end of the capillary by a sudden shake of the wrist.
-While the solder was still melted, a copper wire was insterted into the solder.
-After the solder had cooled down, the electrodes were ready to be used.
-Microelectrodes with $30~\upmu$m tungsten filaments from a 100$~$W Tungsram incandescent lightbulb were also prepared, using the same method.
-
-
 
 
 \section{Results}
-
-\begin{figure}
-\centering
-\begin{tikzpicture}
-\begin{axis}	[
-		%legend style={draw=none},
-		legend style={draw=none, at={(0.5,0.98)}, anchor=north},
-		%legend style=draw=none, at={(0.5,-0.1)}, anchor=north
-		xmin=0,
-		xmax=3060,
-		ymin=-400,
-		ymax=200,
-		width=12cm,
-		height=8cm,
-		xlabel=t / s,
-		ylabel=E vs. Ag/AgCl/KCl(3 M) / mV
-		%ytick={-0.31, -0.3, -0.29, -0.28, -0.27},
-		%/pgf/number format/.cd, use comma, 1000 sep={}
-		]
-\addplot [color=blue] table {data/calibration/uveg.txt};
-\addplot [color=red] table {data/calibration/sigma.txt};
-\addplot [color=green] table {data/calibration/izzo.txt};
-\addlegendentry{Üvegelektród}
-\addlegendentry{Volfrámelektród}
-\addlegendentry{Izzószálelektród}
-%\node[anchor=north west] at (rel axis cs:0.02,0.98) {A};
-\end{axis}
-\end{tikzpicture}
-\caption{A két volfrám mikroelektród kalibrációs mérései. Összehasonlításképpen egy üvegelektród egyidejűleg mért potenciál--idő mérését is ábrázoltam. A potenciált mindhárom elektród esetében az üvegelektród belső, Ag/AgCl/KCl (3 M) referencia félcellájához képest mértem egy kellően nagy bemeneti impedanciájú feszültségmérő (eDAQ isopod EPU) felhasználásával.}
-\label{fig:kalibracios_meres}
-\end{figure}
-
-
 
 \begin{figure}[h!]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
 legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
-	xmin=0.5, xmax=10, width=7cm,height=7cm,xlabel=pKATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV}, clip marker paths=true, xtick = {0,1,2,3,4,5,6,7,8,9,10}, xminorticks=true, minor x tick num = 1]
+	xmin=0.5, xmax=10, width=7cm,height=7cm,xlabel=pCATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV}, clip marker paths=true, xtick = {0,1,2,3,4,5,6,7,8,9,10}, xminorticks=true, minor x tick num = 1]
 \addplot [only marks, domain=0:5.5, mark=*, color=red] table {data/calibration/uveg_h.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=blue] table {data/calibration/uveg_na.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=green] table {data/calibration/uveg_k.txt};
@@ -205,31 +160,10 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \end{tikzpicture}
 \begin{tikzpicture}
 \begin{axis}[
-legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
-xmin=0.5, xmax=10, width=7cm,height=7cm,xlabel=pKATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV}, clip marker paths=true, xtick = {0,1,2,3,4,5,6,7,8,9,10}, xminorticks=true, minor x tick num = 1]
-\addplot [only marks, domain=0:5.5, mark=*, color=red] table {data/calibration/sigma_h.txt};
-\addplot [only marks, domain=0:5.5, mark=*, color=blue] table {data/calibration/sigma_na.txt};
-\addplot [only marks, domain=0:5.5, mark=*, color=green] table {data/calibration/sigma_k.txt};
-\addplot [only marks, domain=0:5.5, mark=*, color=black] table {data/calibration/sigma_mg.txt};
-\addplot [only marks, domain=0:5.5, mark=*, color=purple] table {data/calibration/sigma_ca.txt};
-%\addplot [domain=0:3, samples=500, line width=0.1mm] {86.8-x*29.12};
-\addlegendentry{H$^+$} 
-\addlegendentry{Na$^+$}
-\addlegendentry{K$^+$}
-\addlegendentry{Mg$^{2+}$}
-\addlegendentry{Ca$^{2+}$}
-\node[anchor=north east] at (rel axis cs:0.98,0.98) {B};
-\node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 51.157 mV / pH};
-\node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.9986};
-\end{axis}
-\end{tikzpicture}
-
-\begin{tikzpicture}
-\begin{axis}[
 	legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 	xmin=0.5, xmax=10,
 	width=7cm,height=7cm,
-	xlabel=pKATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV},
+	xlabel=pCATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV},
 	clip marker paths=true,
 	xtick = {0,1,2,3,4,5,6,7,8,9,10}, xminorticks=true, minor x tick num = 1]
 \addplot [only marks, domain=0:5.5, mark=*, color=red] table {data/calibration/izzo_h.txt};
@@ -243,18 +177,18 @@ xmin=0.5, xmax=10, width=7cm,height=7cm,xlabel=pKATION, ylabel={E vs. Ag/AgCl/KC
 \addlegendentry{K$^+$}
 \addlegendentry{Mg$^{2+}$}
 \addlegendentry{Ca$^{2+}$}
-\node[anchor=north east] at (rel axis cs:0.98,0.98) {C};
+\node[anchor=north east] at (rel axis cs:0.98,0.98) {B};
 \node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 53.207 mV / pH};
 \node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.9817};
 \end{axis}
 \end{tikzpicture}
-\caption{(A) Üvegleketród (B) volfrámelektród (C) izzószálelektród kalibrációs egyenese, illetve szelektivitás-vizsgálata.}
-\label{fig:kalibracios_egyenes}
+\caption{Calibration and selectivity study of the glass electrode (A), and the lightbulb electrode (B).}
+\label{fig:calibration}
 \end{figure}
 
 		
 \begin{acknowledgement}
-The author thanks Mats Dahlgren for version one of \textsf{achemso},
+OTKA
 \end{acknowledgement}
 
 \bibliography{tungsten}

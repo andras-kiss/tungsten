@@ -1,3 +1,5 @@
-tungsten-figure0.pdf: data/calibration/uveg.txt
-tungsten-figure0.pdf: data/calibration/sigma.txt
-tungsten-figure0.pdf: data/calibration/izzo.txt
+tungsten-figure0.pdf: data/calibration/uveg_h.txt
+tungsten-figure0.pdf: data/calibration/uveg_na.txt
+tungsten-figure0.pdf: data/calibration/uveg_k.txt
+tungsten-figure0.pdf: data/calibration/uveg_mg.txt
+tungsten-figure0.pdf: data/calibration/uveg_ca.txt

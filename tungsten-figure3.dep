@@ -1,5 +1,0 @@
-tungsten-figure3.pdf: data/calibration/izzo_h.txt
-tungsten-figure3.pdf: data/calibration/izzo_na.txt
-tungsten-figure3.pdf: data/calibration/izzo_k.txt
-tungsten-figure3.pdf: data/calibration/izzo_mg.txt
-tungsten-figure3.pdf: data/calibration/izzo_ca.txt
