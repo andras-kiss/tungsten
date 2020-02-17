@@ -61,7 +61,7 @@ where $a_{H^+}$ is the activity and $\gamma_{H^+}$ is the activity coefficient o
 \end{equation}
 
 
-Even though the Debye--Hückel equation can be used to calculate a theoretical activity coefficient for a single ion, the prevailing view is that if it cannot be measured, than a pH definition that is based on that activity coefficient is an unmeasurable quantity. This logical difficulty was summarized by Bates and Guggenheim in 1960 \cite{bates1960report}. 
+Even though the Debye--Hückel equation can be used to calculate a theoretical activity coefficient for a single ion, the prevailing view is that if it cannot be measured, then a pH definition that is based on that activity coefficient is an unmeasurable quantity. This logical difficulty was summarized by Bates and Guggenheim in 1960 \cite{bates1960report}. 
 
 Their recommended solution was a convention -- since then it has been known as the \emph{Bates--Guggenheim convention} --, in which the activity of a chosen ionic species is defined using the Debye--Hückel equation, and the rest is calculated using the theoretically obtained value for the single ionic species and the experimentally determined mean activity coefficient. The chosen ion is chloride ion. For instance, the activity coefficient of hydrogen ion can be calculated as:
 
@@ -125,16 +125,35 @@ we must mention j. of chem. ed. papers here about economical and interesting pH 
 
 \section{Materials and Methods}
 
-\begin{figure}[!h]
+\paragraph{Electrode fabrication.}
+
+
+
+To obtain the sensing element of the electrode, a 100 W incandescent lighbulb (Tungsram brand, purchased at local hardware store) was carefully wrapped in cloth and broken with a mallet. The contact wire that still had the filament attached was cut near the stem (Fig. \ref{fig:fabrication}a). The electrode body was prepared from two, 4 mm thick, $\approx$ 0.5 cm $\times$ $\approx$ 2 cm, identically shaped Plexiglass pieces (Fig. \ref{fig:fabrication}b). In one of them, a $\approx$ 1 mm groove was cut longitudinally, in which the filmanet with stem was layed (Fig. \ref{fig:fabrication}c). Then, superglue was applied onto the Plexiglas surface that contained the groove with the filament and stem. The other Plexiglass piece was pressed onto the superglued surface, and was held firmly until the superglue cured (Fig. \ref{fig:fabrication}d). The electrode was sanded and polished from all sides except where the electrical lead, the stem was protruding (Fig. \ref{fig:fabrication}e).
+
+\begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{img/plexi.jpg}
-\caption{...}
-\label{fig:plexi}
+\includegraphics[width=0.9\textwidth]{electrode_fabrication.eps}
+\caption{The fabrication process of the tungsten filament electrode. }
+\label{fig:fabrication}
 \end{figure}
 
+\paragraph{Calibration.}
+
+The fabricated tungsten filament electrode was calibrated in a series of buffers ranging from pH = 3.9 to pH = 9.71. For the first three buffers, with a pH value of 3.9, 4.56 and 5.63, Walpole acetate buffer was used. For the next three, with pH values 6.33, 7.06 and 8.12, Michaelis phosphate buffer was used. For the last three, with pH values of 8.68, 9.37 and 9.71, Michaelis borate buffer was prepared. The pH was measured with a WTW SenTix combined pH electrode connected to a WTW inoLab pH 740p high input impedance pH meter (Xylem Analytics Germany Sales GmbH \& Co. KG, Weilheim Germany). The pH was adjusted by adding small quantities of HCl and NaOH, if it was necessary. The glass and the tungsten filament electrodes were calibrated by measuring their potential against the internal reference electrode of the glass electrode in the buffer series. 
 
 
-\section{Results}
+\paragraph{Selectivity study.}
+
+Since the primary ion for the glass and the tungsten filament electrodes is already present in water at an activity that would influence the selectivity study, a buffer had to be used to lower the hydrogen ion activity. Most of the common pH buffers contain alkali metals, and they could not be used to carry the selectivity study, because alkali and alkali earth metals are the most common interferences. For this reason, a pH = 8 TRIS buffer was used as a solvent to create the dilution series using KCl, NaCl, CaCl$_2$ and MgCl$_2$. In each cases, the activities ranged from 10$^{-6}$ M to 10$^{-1}$ M with tenfold increments in activity. The electrodes were immersed in each of the solutions and the resulting potential differences were measured and recorded with the already mentioned pH meter.
+
+\section{Hazards}
+When salvaging the tungsten filament from the lighbulb, care must be taken. The lightbulb must be wrapped several times in a cloth before it is hit with a mallet. Care must be taken when the filament is picked up from the broken pieces of glass. When the Plexiglass body is prepared, a saw is used to cut the groove, then superglue is used to enclose the filament in the groove. During these steps, close supervision of the students is necessary to avoid any harm. Lastly, HCl and NaOH is used during the preparation of the pH buffer series. If these get in contact with skin or the eye, flush with plenty of water for several minutes.
+
+
+
+
+\section{Results and Discussion}
 
 \begin{figure}[h!]
 \centering
@@ -186,9 +205,15 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \label{fig:calibration}
 \end{figure}
 
-		
+
+\section{Conclusion}
+	
+The construction of an economical pH sensitive electrode was presented that is highly selective towards hydrogen ions. The potentiometric cell utilizing the electrode can be used as an engaging demonstration of the potentiometric determintation of pH. The experiment has been carried out by 1st year chemistry BSc students with electrodes that they have prepared themselves.
+
+
+
 \begin{acknowledgement}
-OTKA
+The work was supported by the Hungarian Research Grant: NKFI No.: K125244 as well as by the ... The authors thankful for HEKA Corporation for providing the micromanipulator.
 \end{acknowledgement}
 
 \bibliography{tungsten}
