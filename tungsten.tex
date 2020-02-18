@@ -118,7 +118,9 @@ Another very popular metal/metal-oxide electrode used for pH measurements is the
 In this paper the construction and usage of a simple and inexpensive tungsten pH sensitive electrode is presented. The electrode can be assembled in a highschool or undergraduate chemistry laboratory by students and it can be used as an aid to demonstrate pH and ion-selective electrodes. The excercise can also be useful as an introduction to the IUPAC definition of pH, since it is closely intertwined with the potentiometric determination of pH.
 
 
-we must mention j. of chem. ed. papers here about economical and interesting pH electrodes and their use in demonstrating potemtiometric pH determination.
+we must mention j. of chem. ed. papers here about economical and interesting pH electrodes and their use in demonstrating potemtiometric pH determination \cite{yong2019simple, goldcamp2010inexpensive, marafie2007plastic} and reference electrode \cite{riyazuddin1994low}.
+
+The filament is made of an alloy of tungsten and sodium or potassium \cite{cisternas2015electrode, wechter1972use, schade2010100}.
 
 
 
@@ -145,7 +147,7 @@ The fabricated tungsten filament electrode was calibrated in a series of buffers
 
 \paragraph{Selectivity study.}
 
-Since the primary ion for the glass and the tungsten filament electrodes is already present in water at an activity that would influence the selectivity study, a buffer had to be used to lower the hydrogen ion activity. Most of the common pH buffers contain alkali metals, and they could not be used to carry the selectivity study, because alkaline and alkaline earth metals are the most common interferences. For this reason, a pH = 8 TRIS buffer was used as a solvent to create the dilution series using KCl, NaCl, CaCl$_2$ and MgCl$_2$. In each cases, the activities ranged from 10$^{-6}$ M to 10$^{-1}$ M with tenfold increments in activity. The electrodes were immersed in each of the solutions and the resulting potential differences were measured and recorded with the already mentioned pH meter.
+Since the primary ion for the glass and the tungsten filament electrodes is already present in water at an activity that would influence the selectivity study, a buffer had to be used to lower the hydrogen ion activity. Most of the common pH buffers contain alkaline metals, and they could not be used to carry the selectivity study, because alkaline and alkaline earth metals are the most common interferences. For this reason, a pH = 8 TRIS buffer was used as a solvent to create the dilution series using KCl, NaCl, CaCl$_2$ and MgCl$_2$. In each cases, the activities ranged from 10$^{-6}$ M to 10$^{-1}$ M with tenfold increments in activity. The electrodes were immersed in each of the solutions and the resulting potential differences were measured and recorded with the already mentioned pH meter.
 
 \section{Hazards}
 When salvaging the tungsten filament from the lighbulb, care must be taken. The lightbulb must be wrapped several times in a cloth before it is hit with a mallet. Care must be taken when the filament is picked up from the broken pieces of glass. When the Plexiglass body is prepared, a saw is used to cut the groove, then superglue is used to enclose the filament in the groove. During these steps, close supervision of the students is necessary to avoid any harm. Lastly, HCl and NaOH is used during the preparation of the pH buffer series. If these get in contact with skin or the eye, flush with plenty of water for several minutes.
@@ -166,7 +168,7 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \addplot [only marks, domain=0:5.5, mark=*, color=green] table {data/calibration/uveg_k.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=black] table {data/calibration/uveg_mg.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=purple] table {data/calibration/uveg_ca.txt};
-%\addplot [domain=0:3, samples=500, line width=0.1mm] {86.8-x*29.12};
+\addplot [domain=0:10, samples=500, line width=0.1mm] {385.626-x*54.788};
 \addlegendentry{H$^+$} 
 \addlegendentry{Na$^+$}
 \addlegendentry{K$^+$}
@@ -190,7 +192,7 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \addplot [only marks, domain=0:5.5, mark=*, color=green] table {data/calibration/izzo_k.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=black] table {data/calibration/izzo_mg.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=purple] table {data/calibration/izzo_ca.txt};
-%\addplot [domain=0:3, samples=500, line width=0.1mm] {86.8-x*29.12};
+\addplot [domain=0:10, samples=500, line width=0.1mm] {117.01-x*53.207};
 \addlegendentry{H$^+$} 
 \addlegendentry{Na$^+$}
 \addlegendentry{K$^+$}
@@ -201,7 +203,7 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.9817};
 \end{axis}
 \end{tikzpicture}
-\caption{Calibration and selectivity study of the glass electrode (A), and the lightbulb electrode (B).}
+\caption{Calibration and selectivity study of the glass electrode (A), and the tungsten filament electrode (B).}
 \label{fig:calibration}
 \end{figure}
 
