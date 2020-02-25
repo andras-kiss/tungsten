@@ -156,45 +156,45 @@ The filament is made of an alloy of tungsten and sodium or potassium \cite{ciste
 \begin{tikzpicture}
 \begin{axis}[
 legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
-	xmin=0.5, xmax=10, width=7cm,height=7cm,xlabel=pCATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV}, clip marker paths=true, xtick = {0,1,2,3,4,5,6,7,8,9,10}, xminorticks=true, minor x tick num = 1]
+	xmin=0.5, xmax=12, width=7cm,height=7cm,xlabel=pCATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV}, clip marker paths=true, xtick = {0,1,2,3,4,5,6,7,8,9,10,11,12}, legend pos=north east, xminorticks=true, minor x tick num = 1]
 \addplot [only marks, domain=0:5.5, mark=*, color=red] table {data/calibration/uveg_h.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=blue] table {data/calibration/uveg_na.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=green] table {data/calibration/uveg_k.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=black] table {data/calibration/uveg_mg.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=purple] table {data/calibration/uveg_ca.txt};
-\addplot [domain=0:10, samples=500, line width=0.1mm] {385.626-x*54.788};
+\addplot [domain=0:12, samples=500, line width=0.1mm] {402.806-x*57.189};
 \addlegendentry{H$^+$} 
 \addlegendentry{Na$^+$}
 \addlegendentry{K$^+$}
 \addlegendentry{Mg$^{2+}$}
 \addlegendentry{Ca$^{2+}$}
-\node[anchor=north east] at (rel axis cs:0.98,0.98) {A};
-\node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 54.788 mV / pH};
-\node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.9998};
+\node[anchor=north east] at (rel axis cs:0.15,0.98) {A};
+\node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 57.19 mV / pH};
+\node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.999999};
 \end{axis}
 \end{tikzpicture}
 \begin{tikzpicture}
 \begin{axis}[
 	legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
-	xmin=0.5, xmax=10,
+	xmin=0.5, xmax=12,
 	width=7cm,height=7cm,
 	xlabel=pCATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV},
 	clip marker paths=true,
-	xtick = {0,1,2,3,4,5,6,7,8,9,10}, xminorticks=true, minor x tick num = 1]
+	xtick = {0,1,2,3,4,5,6,7,8,9,10,11,12}, legend pos=north east, xminorticks=true, minor x tick num = 1]
 \addplot [only marks, domain=0:5.5, mark=*, color=red] table {data/calibration/izzo_h.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=blue] table {data/calibration/izzo_na.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=green] table {data/calibration/izzo_k.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=black] table {data/calibration/izzo_mg.txt};
 \addplot [only marks, domain=0:5.5, mark=*, color=purple] table {data/calibration/izzo_ca.txt};
-\addplot [domain=0:10, samples=500, line width=0.1mm] {117.01-x*53.207};
+\addplot [domain=0:12, samples=500, line width=0.1mm] {0.895-x*40.05};
 \addlegendentry{H$^+$} 
 \addlegendentry{Na$^+$}
 \addlegendentry{K$^+$}
 \addlegendentry{Mg$^{2+}$}
 \addlegendentry{Ca$^{2+}$}
-\node[anchor=north east] at (rel axis cs:0.98,0.98) {B};
-\node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 53.207 mV / pH};
-\node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.9817};
+\node[anchor=north east] at (rel axis cs:0.15,0.98) {B};
+\node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 40.05 mV / pH};
+\node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.997582};
 \end{axis}
 \end{tikzpicture}
 \caption{Calibration and selectivity study of the glass electrode (A), and the tungsten filament electrode (B).}
