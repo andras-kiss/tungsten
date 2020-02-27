@@ -134,7 +134,7 @@ To obtain the sensing element of the electrode, a 100 W incandescent lighbulb (T
 
 \paragraph{Calibration.}
 
-The fabricated tungsten filament electrode was calibrated in a series of buffers ranging from pH = 3.9 to pH = 9.71. For the first three buffers, with a pH value of 3.9, 4.56 and 5.63, Walpole acetate buffer was used. For the next three, with pH values 6.33, 7.06 and 8.12, Michaelis phosphate buffer was used. For the last three, with pH values of 8.68, 9.37 and 9.71, Michaelis borate buffer was prepared. The pH was measured with a WTW SenTix combined pH electrode connected to a WTW inoLab pH 740p high input impedance pH meter (Xylem Analytics Germany Sales GmbH \& Co. KG, Weilheim Germany). The pH was adjusted by adding small quantities of HCl and NaOH, if it was necessary. The glass and the tungsten filament electrodes were calibrated by measuring their potential against the internal reference electrode of the glass electrode in the buffer series. 
+The fabricated tungsten filament electrode was calibrated in a series of Britton--Robinson buffers with the following pH values: 2.19, 3.04, 4.10, 5.12, 6.09, 7.19, 8.08, 8.89, 9.87, 10.88, 11.81. The pH was measured with a WTW SenTix combined pH electrode connected to a WTW inoLab pH 740p high input impedance pH meter (Xylem Analytics Germany Sales GmbH \& Co. KG, Weilheim Germany), that was calibrated with three pH buffers (4.00, 7.00, 10.00 at 20 $\celsius$, Scharlab,S.L. Barcelona, Spain). The glass and the tungsten filament electrodes were calibrated by measuring their potential against the internal reference electrode of the glass electrode in the buffer series. 
 
 
 \paragraph{Selectivity study.}
@@ -149,7 +149,10 @@ When salvaging the tungsten filament from the lighbulb, care must be taken. The 
 
 \section{Results and Discussion}
 
-The filament is made of an alloy of tungsten and sodium or potassium \cite{cisternas2015electrode, wechter1972use, schade2010100}.
+To make sure that the measured pH values are accurate, the pH meter with the glass electrode was first calibrated with high accuracy pH buffers. The resulting slope was 57.19 mV / pH at 21 $\celsius$. Then, the pH values of the created Britton--Robinson buffer series were measured. Once these were known with high accuracy, the same buffer series was used again to calibrate the tungsten filament electrode. The resulting calibration plot can be seen in Fig. \ref{fig:calibration}B. The slope of the calibration equation is 40.05 mV / pH, which is significantly lower than that of the theoretically expected value from the Nernst--equation, or the one that was measured for the glass electrode in this study. The lower value might be explained by the alloying elements in the tungsten filament. It is well known, that the filaments of incandescent lightbulbs are not made of pure tungsten, but a so called ,,tungsten bronze'' alloy, made of tungsten and potassium or sodium, which improves ductility that helps during the manufacturing process \cite{cisternas2015electrode, wechter1972use, schade2010100}. Even high purity metal/metal--oxide electrodes don't reach the nernstian slope, which can be observed in the literature ... .
+
+Because of these alloying elements, the tungsten filament electrode was expected to be less selective towards hydrogen ions than the glass electrode. The selectivity study was performed in dilution series of KCl, NaCl, CaCl$_2$ and MgCl$_2$ from 10$^{-1}$ M to 10$^{-6}$ M with tenfold increases in concentration. A buffer was used to lower the hydrogen ion activity, and because most of the alkaline buffers contain an ion that interefes with hydrogen ion--selective electrodes, the TRIS buffer was selected at pH = 8. The
+TRIS buffer had a concentration of 1.25 M. This concentration was more than enough to increase the ionic strength to a value at which the activity coefficients for the members of the buffers series can be regarded as constant, and concentration can be used in the selectivity calculations instead of activity. The measured potential values for the glass and tungsten filament electrodes for the interfering ions can be seen in Fig. \ref{fig:calibration}A and B, respectively. As expected, no interference can be observed for any of the tested ions when the glass electrode was used. However, when measured with the tungsten filament electrode, some of the tested ions interfered with the pH measurement at higher than 10$^{-4}$ M concentration. Below this concentration the potential corresponding to pH = 8 buffer was observed ($\approx$ -315 mV). Above 10$^{-4}$ M, most of the ions were interfering to a small extent. Interestingly, K$^+$ caused the potential to drop at higher concentration. This result was replicated several times. The selectivity coefficients were calculated with the separate solution method from activities corresponding to the same potential. The selectivity coefficient values are summarized in Table \ref{table:selectivity}.
 
 \begin{figure}[h!]
 \centering
@@ -202,18 +205,16 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \end{figure}
 
 
-The selectivity coefficients are shown in Table \ref{ref:selectivity}.
-
 \begin{table}[]
 \caption{The selectivity coefficients of the tungsten filament electrode for the different cations.}
-\label{ref:selectivity}
+\label{table:selectivity}
 \begin{tabular}{ll}
 Interfering ion & Selectivity coefficient \\
 \hline
-Na$^+$             & 1.293 $\cdot$ 10$^{-7}$              \\
-K$^+$              & 3.635 $\cdot$ 10$^{-8}$              \\
-Ca$^{2+}$            & 4.389 $\cdot$ 10$^{-8}$              \\
-Mg$^{2+}$            & 4.253 $\cdot$ 10$^{-8}$            
+Na$^+$             & 2.91 $\cdot$ 10$^{-7}$              \\
+K$^+$              & 5.40 $\cdot$ 10$^{-9}$              \\
+Ca$^{2+}$            & 1.01 $\cdot$ 10$^{-7}$              \\
+Mg$^{2+}$            & 7.74 $\cdot$ 10$^{-8}$            
 \end{tabular}
 \end{table}
 
