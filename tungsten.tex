@@ -9,6 +9,7 @@
 \usepackage{pgfplots}
 \usepackage{pst-plot}
 \usepackage{tikz}
+\usepackage{verbatim}
 \usepgfplotslibrary{colormaps}
 \usetikzlibrary{pgfplots.colormaps}
 \usepgfplotslibrary{external} 
@@ -154,8 +155,11 @@ To make sure that the measured pH values are accurate, the glass electrode was f
 Because of these alloying elements, the tungsten filament electrode was expected to be less selective towards hydrogen ions than the glass electrode. The selectivity study was performed in dilution series of KCl, NaCl, CaCl$_2$ and MgCl$_2$ from 10$^{-1}$ M to 10$^{-6}$ M with tenfold increases in concentration. A buffer was used to lower the hydrogen ion activity, and because most of the alkaline buffers contain an ion that interefes with hydrogen ion--selective electrodes, the TRIS buffer was selected at pH = 8. The
 TRIS buffer had a concentration of 1.25 M. This concentration was more than enough to increase the ionic strength to a value at which the activity coefficients for the members of the buffers series can be regarded as constant, and concentration can be used in the selectivity calculations instead of activity. The measured potential values for the glass and tungsten filament electrodes for the interfering ions can be seen in Fig. \ref{fig:calibration}A and B, respectively. As expected, no interference can be observed for any of the tested ions when the glass electrode was used. However, when measured with the tungsten filament electrode, some of the tested ions interfered with the pH measurement at higher than 10$^{-4}$ M concentration. Below this concentration the potential corresponding to pH = 8 buffer was observed ($\approx$ -315 mV). Above 10$^{-4}$ M, most of the ions were interfering to a small extent. Interestingly, K$^+$ caused the potential to drop at higher concentration. This result was replicated several times. The selectivity coefficients were calculated with the separate solution method from activities corresponding to the same potential. The selectivity coefficient values are summarized in Table \ref{table:selectivity}.
 
+
 \begin{figure}[h!]
 \centering
+
+\begin{comment}
 \begin{tikzpicture}
 \begin{axis}[
 legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
@@ -176,12 +180,35 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.999999};
 \end{axis}
 \end{tikzpicture}
+\end{comment}
+
+\begin{tikzpicture}
+\begin{axis}	[
+		%legend style={draw=none},
+		legend style={draw=none, at={(0.5,0.98)}, anchor=north},
+		%legend style=draw=none, at={(0.5,-0.1)}, anchor=north
+		xmin=0,
+		xmax=660,
+		ymin=-500,
+		ymax=-50,
+		width=7cm,
+		height=7cm,
+		xlabel=t / s,
+		ylabel=E vs. Ag/AgCl/KCl(3 M) / mV
+		%ytick={-0.31, -0.3, -0.29, -0.28, -0.27},
+		%/pgf/number format/.cd, use comma, 1000 sep={}
+		]
+\addplot [color=red, only marks] table {data/calibration/time_dep.csv};
+\node[anchor=north east] at (rel axis cs:0.15,0.98) {A};
+%\node[anchor=north west] at (rel axis cs:0.02,0.98) {A};
+\end{axis}
+\end{tikzpicture}
 \begin{tikzpicture}
 \begin{axis}[
 	legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 	xmin=0.5, xmax=12,
 	width=7cm,height=7cm,
-	xlabel=pCATION, ylabel={E vs. Ag/AgCl/KCl(3 M), mV},
+	xlabel=pCATION, ylabel={E vs. Ag/AgCl/KCl(3 M) / mV},
 	clip marker paths=true,
 	xtick = {0,1,2,3,4,5,6,7,8,9,10,11,12}, legend pos=north east, xminorticks=true, minor x tick num = 1]
 \addplot [only marks, domain=0:5.5, mark=*, color=red] table {data/calibration/izzo_h.txt};
@@ -204,6 +231,34 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \label{fig:calibration}
 \end{figure}
 
+
+\begin{comment}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}	[
+		%legend style={draw=none},
+		legend style={draw=none, at={(0.5,0.98)}, anchor=north},
+		%legend style=draw=none, at={(0.5,-0.1)}, anchor=north
+		xmin=0,
+		xmax=660,
+		ymin=-500,
+		ymax=-50,
+		width=12cm,
+		height=8cm,
+		xlabel=t / s,
+		ylabel=E vs. Ag/AgCl/KCl(3 M) / mV
+		%ytick={-0.31, -0.3, -0.29, -0.28, -0.27},
+		%/pgf/number format/.cd, use comma, 1000 sep={}
+		]
+\addplot [color=red, only marks] table {data/calibration/time_dep.csv};
+%\node[anchor=north west] at (rel axis cs:0.02,0.98) {A};
+\end{axis}
+\end{tikzpicture}
+	\caption{A két mikroelektród kalibrációs mérései. Összehasonlításképpen egy üvegelektród egyidejűleg mért potenciál--idő mérését is ábrázoltam. A potenciált mindhárom elektród esetében az üvegelektród belső, Ag/AgCl/KCl (3 M) referencia félcellájához képest mértem egy kellően nagy bemeneti impedanciájú feszültségmérő (eDAQ isopod EPU) felhasználásával.}
+\label{fig:kalibracios_meres}
+\end{figure}
+\end{comment}
 
 \begin{table}[]
 \caption{The selectivity coefficients of the tungsten filament electrode for the different cations.}

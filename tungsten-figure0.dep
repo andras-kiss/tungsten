@@ -1,5 +1,1 @@
-tungsten-figure0.pdf: data/calibration/uveg_h.txt
-tungsten-figure0.pdf: data/calibration/uveg_na.txt
-tungsten-figure0.pdf: data/calibration/uveg_k.txt
-tungsten-figure0.pdf: data/calibration/uveg_mg.txt
-tungsten-figure0.pdf: data/calibration/uveg_ca.txt
+tungsten-figure0.pdf: data/calibration/time_dep.csv
