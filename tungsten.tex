@@ -55,7 +55,7 @@ At first glance, it looks like a deceptively simple concept. Complications aroun
 \textrm{pH} = -\log_{10} a_{\textrm{H}^+} = -\log_{10} c_{\textrm{H}^+} \gamma_{H^+}
 \end{equation}
 
-where $a_{H^+}$ is the activity and $\gamma_{H^+}$ is the activity coefficient of hydrogen ions. This definition however raises another problem. It includes the activity coefficient of a single ion, which is unmeasurable. It is possible to measure the \emph{mean activity coefficient} only, for example in the case of HCl solution:
+where $a_{H^+}$ is the activity and $\gamma_{H^+}$ is the activity coefficient of hydrogen ions. This definition however raises another problem. It includes the activity coefficient of a single ion, which cannot be separated from the activity coefficient of counterions. Without knowing the contribution of individual ions to the activity coefficient, only the \emph{mean activity coefficient} can be measured, for example in the case of HCl solution:
 
 \begin{equation}
 \gamma_{H^+, Cl^-} = \sqrt{\gamma_{H^+} \gamma_{Cl^-}}
@@ -63,13 +63,25 @@ where $a_{H^+}$ is the activity and $\gamma_{H^+}$ is the activity coefficient o
 
 Even though the Debye--Hückel equation can be used to calculate a theoretical activity coefficient for a single ion, the prevailing view is that if it cannot be measured, then a pH definition that is based on that activity coefficient is an unmeasurable quantity. This logical difficulty was summarized by Bates and Guggenheim in 1960 \cite{bates1960report}. 
 
-Their recommended solution was a convention -- since then it has been known as the \emph{Bates--Guggenheim convention} --, in which the activity of a chosen ionic species is defined using the Debye--Hückel equation, and the rest is calculated using the theoretically obtained value for the single ionic species and the experimentally determined mean activity coefficient. In the Bates--Guggenheim convention, the activity coefficient of the chloride ion was The chosen ion is chloride ion. For instance, the activity coefficient of hydrogen ion can be calculated as:
+Their recommended solution was a convention, which became known as the \emph{Bates--Guggenheim} convention. According to the convention, first the activity coefficient of chloride ions was calculated using the extended Debye--Hückel equation:
+
+\begin{equation}
+-\log_{10} \gamma = \frac{A z^2 \sqrt{I}} {1 + Ba\sqrt{I} }
+\end{equation}
+
+where $A$ and $B$ are constants, $a$ is ionic radius and $I$ is ionic strength calculated with the following equation:
+
+\begin{equation}
+I = \begin{matrix}\frac{1}{2}\end{matrix}\sum_{i=1}^{n} c_i z_i^{2}
+\end{equation}
+
+where $c_i$ is and $z_i$ is the concentration and charge of the $i$th ion, and $n$ is the total number of ionic species in the solution. Once the activity coefficient of chloride ion was calculated, the activity coefficient of another ion could be determined by measuring the mean activity coefficient of an electrolyte that it forms with chloride ions. Then, for instance, the activity coefficient of hydrogen ion can be calculated as:
 
 \begin{equation}
 \gamma_{H^+} = \frac{\gamma_{H^+, Cl^-}^2}{\gamma_{Cl^-}}
 \end{equation}
 
-This convention has been the basis for the IUPAC (International Union of Pure and Applied Chemistry) recommendation to define pH in 1985 \cite{covington1985definition} and 2002 \cite{buck2002measurement}, which is currently the most up to date definition from IUPAC:
+In this way, the contribution of chloride ions to the mean activity coefficient is accepted as correct by definition, which in turn makes the determination of individual activity coefficient of other ions possible. This convention has been the basis for the IUPAC (International Union of Pure and Applied Chemistry) recommendation to define pH in 1985 \cite{covington1985definition} and 2002 \cite{buck2002measurement}, which is currently the most up to date definition from IUPAC:
 
 \begin{equation}
 \textrm{pH}= -\log_{10}a_{H^+} = -\log_{10}(m_{H^+} \gamma_{m, H^+}/m^\theta)
@@ -109,13 +121,15 @@ It is pH sensitive because hydrogen ions participate in the equilibrium between 
         \ce{2Sb_{(s)} + 3H_2O <=> Sb_2O_3 + 6H^+ + 6e^-}
 \end{equation}
 
-Another very popular metal/metal-oxide electrode used for pH measurements is the tungsten electrode. Its function is also based on the equilibrium between the metal and its oxide \cite{kriksunov1994tungsten}:
+Another very popular metal/metal-oxide electrode used for pH measurements is the tungsten electrode. Its function is based on the intercalation and deintercalation of hydrogen ions into the oxide layer that is followed by a change in the oxidation state of tungsten oxide \cite{fenster2008single}:
 
 \begin{equation}
-        \ce{W_{(s)} + 2H_2O <=> WO_2 + 4H^+ + 4e^-}
+        \ce{WO_3 + xH^+ + xe^- <=> H_xWO_3}
 \end{equation}
 
-In this paper the construction and usage of a simple and inexpensive tungsten pH sensitive electrode is presented. This electrode could provide an interesting teaching aid like the pH sensitive coverslip glass electrode developed and characterized by Yong et al. \cite{yong2019simple} or other similar, but ionohore based indicator electrodes \cite{goldcamp2010inexpensive, marafie2007plastic}
+It is well known that the filament of incandescent lightbulbs is made of an alloy called \emph{,,tungsten bronze''} that is mostly tungsten \cite{cisternas2015electrode, wechter1972use, schade2010100}. It means that it might be possible to fabricate a pH sensitive indicator electrode out of a traditional lightbulb.
+
+In this paper the construction and usage of a simple and inexpensive tungsten pH sensitive electrode is presented, in which the sensing element is a tungsten filament salvaged from an incandescent lightbulb. This electrode could provide an interesting teaching aid like the pH sensitive coverslip glass electrode developed and characterized by Yong et al. \cite{yong2019simple} or other similar, but ionohore based indicator electrodes \cite{goldcamp2010inexpensive, marafie2007plastic}
 % and a reference electrode \cite{riyazuddin1994low}.
 The electrode can be assembled in a highschool or undergraduate chemistry laboratory by students and it can be used as an aid to demonstrate pH and ion-selective electrodes. The excercise can also be useful as an introduction to the IUPAC definition of pH, since it is closely intertwined with the potentiometric determination of pH.
 
