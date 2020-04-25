@@ -32,7 +32,7 @@
 
 \begin{document}
 \begin{abstract}
-One of the earliest concepts of chemistry taught in school is pH. It is usually introduced during the discussion of acids and bases. Students are taught to detect the acidity of substances using pH indicators, usually in the form of indicator paper. While this method is convenient and easy for students to relate to, it does not give any deeper insight into the meaning of pH. To truly comprehend pH, students need to learn to approach the concept from an electroanalytical point of view. The aim of this paper is to avail teachers of an interactive and demonstrative experiment in order to facilitate this transition.
+One of the earliest concepts of chemistry taught in school is pH. It is usually introduced during the discussion of acids and bases. Students are taught to detect the acidity of substances using pH indicators, usually in the form of indicator paper. While this method is convenient and easy for students to relate to, apart from not being very accurate, it does not give any deeper insight into the meaning of pH. To truly comprehend pH, students need to learn to approach the concept from an electroanalytical point of view. The aim of this paper is to avail teachers of an additional interactive and demonstrative experiment in order to facilitate this transition.
 
 We demonstrate the fabrication of a simple and economical metal/metal--oxide type pH indicator electrode using simple household items. The sensing element is made from the tungsten alloy filament of an incandescent lightbulb, that is sandwiched between two pieces of Plexiglass using superglue. 
 
@@ -43,55 +43,61 @@ We demonstrate the fabrication of a simple and economical metal/metal--oxide typ
 
 \section{Introduction}
 
+The glass electrode is the most well-known ion-selective electrode, because the negative logarithm of hydrogen-ion activity that is pH, has special importance. 
+%\begin{equation}
+%\textrm{pH} = -\log_{10} a_{\textrm{H}^+}
+%\end{equation}
+It is found in virtually every laboratory, and students are likely to encounter it even during their highschool education. However, besides the glass electrode, highschool students and even undergraduates usually don't learn about other hydrogen-ion selective electrodes. 
+%Using other type of electrodes to determine pH might be beneficial in understanding the concept of pH, and additionally learning more about ion-selective electrodes in general.
+The exclusivity of the glass electrode is most likely due to it's relatively low cost and excellent characteristics. Other ion-selective electrodes usually cost a lot more and don't function as well. For educational purposes however, there are several low cost fabrication techniques described in the literature, which allow students even in a highschool chemistry laboratory to fabricate their own electrodes, such as the ionohore based indicator electrodes \cite{goldcamp2010inexpensive, marafie2007plastic} or simple reference electrodes \cite{riyazuddin1994low}. There is even a procedure to fabricate low cost glass electrodes from microscope slide cover sheets \cite{yong2019simple}. These electrodes can be manufactured and calibrated by students in a few laboratory sessions and can provide a great learning experience for them. They allow a view on pH and ion-selective electrodes from another angle, and students are more likely to understand the function of a device when they fabricate it themselves.
+
+The electrode demonstrated in this paper is an ion-selective electrode that is made using the filament of an incandescent light bulb. It is well known that the filament of incandescent lightbulbs is made of an alloy called \emph{,,tungsten bronze''} that is mostly tungsten \cite{cisternas2015electrode, wechter1972use, schade2010100}. It is a metal/metal-oxide type electrode that is sensitive to pH. Its function is based on the intercalation and deintercalation of hydrogen ions into the oxide layer that is followed by a change in the oxidation state of tungsten oxide \cite{fenster2008single}:
+
+\begin{equation}
+        \ce{WO_3 + xH^+ + xe^- <=> H_xWO_3}
+\end{equation}
+
+The metal/metal-oxide type pH electrodes are usually used in research when the application of glass electrodes is challenging or impossible. These include measuring pH at high temperature or in hydrogen--fluoride solution, or application in the food industry. 
+Intensive research has been conducted for several decades to find alternatives to the glass electrode. One such alternative is to use metal/metal-oxide electrodes.
+Besides the tungsten electrode, one of the most often used type of these is the Ir/IrO$_2$ electrode \cite{beyenal2004improved}.
+The oldest is certainly the Sb/Sb$_2$O$_3$ electrode, its initial characterization dating back to 1923 \cite{uhl1923electrometric}.
+It is pH sensitive because hydrogen ions participate in the equilibrium between antimony and its oxide on the surface:
+
+\begin{equation}
+        \ce{2Sb_{(s)} + 3H_2O <=> Sb_2O_3 + 6H^+ + 6e^-}
+\end{equation}
+
+In this paper, the fabrication and calibration of the above mentioned tungsten filament electrode is described. The components for the electrode can be obtained from a local hardware store, and the construction is very simple, requiring only an incandescent lighbulb, a small sheet of PlexiGlas and superglue. Electrodes prepared by students will be shown as well as the results of the calibration and selectivity study performed by 1st and 2nd year university BSc students of chemistry. Altogether 8 students participated in the demonstration that involved a 2 hour seminar about ion-selective electrodes and pH and two 3 hour laboratory sessions fabricating and characterizing the electrodes. A typical notebook prepared by a 2nd year chemistry BSc student about the demonstration is shown as example in the supportin material.
+
+\section{Theory}
+
 pH is one of the most important concepts in chemistry, originally defined by S\o rensen in 1909 \cite{sorensen1909messung} as the negative logarithm of the concentration of hydrogen ion:
 
 \begin{equation}
 \textrm{pH} = -\log_{10} c_{\textrm{H}^+}
 \end{equation}
 
-At first glance, it looks like a deceptively simple concept. Complications around this definition start to arise when we replace concentration with activity, taking into account that hydrogen ions have charge, therefore their behaviour correlates more closely with activity than concentration:
+At first glance, it looks like a deceptively simple concept. Complications start to arise when we replace concentration with activity, taking into account that hydrogen ions have charge, therefore their behaviour correlates more closely with activity than concentration:
 
 \begin{equation}
 \textrm{pH} = -\log_{10} a_{\textrm{H}^+} = -\log_{10} c_{\textrm{H}^+} \gamma_{H^+}
 \end{equation}
 
-where $a_{H^+}$ is the activity and $\gamma_{H^+}$ is the activity coefficient of hydrogen ions. This definition however raises another problem. It includes the activity coefficient of a single ion, which cannot be separated from the activity coefficient of counterions. Without knowing the contribution of individual ions to the activity coefficient, only the \emph{mean activity coefficient} can be measured, for example in the case of HCl solution:
-
-\begin{equation}
-\gamma_{H^+, Cl^-} = \sqrt{\gamma_{H^+} \gamma_{Cl^-}}
-\end{equation}
-
-Even though the Debye--Hückel equation can be used to calculate a theoretical activity coefficient for a single ion, the prevailing view is that if it cannot be measured, then a pH definition that is based on that activity coefficient is an unmeasurable quantity. This logical difficulty was summarized by Bates and Guggenheim in 1960 \cite{bates1960report}. 
-
-Their recommended solution was a convention, which became known as the \emph{Bates--Guggenheim} convention. According to the convention, first the activity coefficient of chloride ions was calculated using the extended Debye--Hückel equation:
+where $a_{H^+}$ is the activity and $\gamma_{H^+}$ is the activity coefficient of hydrogen ions. This definition however raises another problem. It includes the activity coefficient of a single ion, which cannot be separated from the activity coefficient of counterions. The IUPAC recommended solution \cite{buck2002measurement} is the \emph{Bates--Guggenheim} convention  \cite{bates1960report}. In order to provide a basis for the determination of single ion activity coefficients, the activity coefficient of chloride ion is defined using the extended Debye--Hückel equation:
 
 \begin{equation}
 -\log_{10} \gamma = \frac{A z^2 \sqrt{I}} {1 + Ba\sqrt{I} }
+\label{EDH}
 \end{equation}
 
 where $A$ and $B$ are constants, $a$ is ionic radius and $I$ is ionic strength calculated with the following equation:
 
 \begin{equation}
 I = \begin{matrix}\frac{1}{2}\end{matrix}\sum_{i=1}^{n} c_i z_i^{2}
+\label{ionic_strength}
 \end{equation}
 
-where $c_i$ is and $z_i$ is the concentration and charge of the $i$th ion, and $n$ is the total number of ionic species in the solution. Once the activity coefficient of chloride ion was calculated, the activity coefficient of another ion could be determined by measuring the mean activity coefficient of an electrolyte that it forms with chloride ions. Then, for instance, the activity coefficient of hydrogen ion can be calculated as:
-
-\begin{equation}
-\gamma_{H^+} = \frac{\gamma_{H^+, Cl^-}^2}{\gamma_{Cl^-}}
-\end{equation}
-
-In this way, the contribution of chloride ions to the mean activity coefficient is accepted as correct by definition, which in turn makes the determination of individual activity coefficient of other ions possible. This convention has been the basis for the IUPAC (International Union of Pure and Applied Chemistry) recommendation to define pH in 1985 \cite{covington1985definition} and 2002 \cite{buck2002measurement}, which is currently the most up to date definition from IUPAC:
-
-\begin{equation}
-\textrm{pH}= -\log_{10}a_{H^+} = -\log_{10}(m_{H^+} \gamma_{m, H^+}/m^\theta)
-\end{equation}
-
-where $m_{H^+}$ is the molality and $\gamma_{m, H^+}$ is the molality based activity coefficient of hydrogen ions, $m^\theta$ is the standard molality (1 mol kg$^{-1}$). The activity coefficient of hydrogen ions in the above equation is calculated using the Bates--Guggenheim convention.
-
-The electrochemical cell used in the measurement of the primary pH standards is known as the \emph{Harned Cell} \cite{harned1958activity}.
-To measure the pH in such a cell, a conventional procedure was developed at NBS (National Bureau of Standards) \cite{durst1975standardization} and recommended at present by the last IUPAC recommendations \cite{covington2002measurement}.
-NIST (National Institute of Standards and Technology) in the U.S. and PTB (Physikalisch-Technische Bundesanstalt) in Germany have presented pH values using the Harned Cell. 
+where $c_i$ and $z_i$ is the concentration and charge of the $i$th ion, and $n$ is the total number of ionic species in the solution. 
 
 In practice, pH is most commonly measured with a glass electrode.
 It has been known for more than a hundred years that the potential difference measured across a glass membrane depends on the ratio of the hydrogen ion activity in the two solutions that the membrane separates \cite{haber1909elektrische, haber1909concerning}.
@@ -104,34 +110,6 @@ This behaviour is described by the Nikolsky--equation that takes the effect of i
 \begin{equation}
 E=E^\theta + \frac{RT}{z_iF} \ln \left [ a_i + \sum_{j} \left ( k_{ij}a_j^{z_i/z_j} \right ) \right ]
 \end{equation}
-
-There are several other type of electrodes that can be used to measure pH.
-One of them is the ionophore based hydrogen ion selective electrode. 
-Its function is based on an organic ionophore that selectively complexes hydrogen ions.
-When such an ionophore is embedded in a PVC based membrane, the crossmembrane potential difference depends on the activity ratio of hydrogen ion at the two opposing sides of the membrane \cite{goldcamp2010inexpensive}.
-
-There are certain applications where the use of a glass electrode might be challenging or impossible.
-These include measuring pH at high temperature or in hydrogen--fluoride solution, or application in the food industry. 
-Intensive research has been conducted for several decades to find alternatives to the glass electrode. One such alternative is to use metal/metal-oxide electrodes.
-One of the most often used type of these is the Ir/IrO$_2$ electrode \cite{beyenal2004improved}.
-The oldest is certainly the Sb/Sb$_2$O$_3$ electrode, its initial characterization dating back to 1923 \cite{uhl1923electrometric}.
-It is pH sensitive because hydrogen ions participate in the equilibrium between antimony and its oxide on the surface:
-
-\begin{equation}
-        \ce{2Sb_{(s)} + 3H_2O <=> Sb_2O_3 + 6H^+ + 6e^-}
-\end{equation}
-
-Another very popular metal/metal-oxide electrode used for pH measurements is the tungsten electrode. Its function is based on the intercalation and deintercalation of hydrogen ions into the oxide layer that is followed by a change in the oxidation state of tungsten oxide \cite{fenster2008single}:
-
-\begin{equation}
-        \ce{WO_3 + xH^+ + xe^- <=> H_xWO_3}
-\end{equation}
-
-It is well known that the filament of incandescent lightbulbs is made of an alloy called \emph{,,tungsten bronze''} that is mostly tungsten \cite{cisternas2015electrode, wechter1972use, schade2010100}. It means that it might be possible to fabricate a pH sensitive indicator electrode out of a traditional lightbulb.
-
-In this paper the construction and usage of a simple and inexpensive tungsten pH sensitive electrode is presented, in which the sensing element is a tungsten filament salvaged from an incandescent lightbulb. This electrode could provide an interesting teaching aid like the pH sensitive coverslip glass electrode developed and characterized by Yong et al. \cite{yong2019simple} or other similar, but ionohore based indicator electrodes \cite{goldcamp2010inexpensive, marafie2007plastic}
-% and a reference electrode \cite{riyazuddin1994low}.
-The electrode can be assembled in a highschool or undergraduate chemistry laboratory by students and it can be used as an aid to demonstrate pH and ion-selective electrodes. The excercise can also be useful as an introduction to the IUPAC definition of pH, since it is closely intertwined with the potentiometric determination of pH.
 
 %economical instruments \cite{kubinova2015chemduino, grinias2016inexpensive, jin2018open}
 
@@ -149,12 +127,22 @@ To obtain the sensing element of the electrode, a 100 W incandescent lightbulb (
 
 \paragraph{Calibration.}
 
-The fabricated tungsten filament electrode was calibrated in a series of Britton--Robinson buffers with the following pH values: 2.19, 3.04, 4.10, 5.12, 6.09, 7.19, 8.08, 8.89, 9.87, 10.88, 11.81. The pH was measured with a WTW SenTix combined pH electrode connected to a WTW inoLab pH 740p high input impedance pH meter (Xylem Analytics Germany Sales GmbH \& Co. KG, Weilheim Germany), that was calibrated with three pH buffers (4.00, 7.00, 10.00 at 20 $\celsius$, Scharlab,S.L. Barcelona, Spain). The glass and the tungsten filament electrodes were calibrated by measuring their potential against the internal reference electrode of the glass electrode in the buffer series. The potential values were recorded when the instrument indicated a steady reading. This ensured that they were taken at the same point of the response curve.
+The fabricated tungsten filament electrodes were calibrated by students in a series of Britton--Robinson buffers with the following pH values: 2.19, 3.04, 4.10, 5.12, 6.09, 7.19, 8.08, 8.89, 9.87, 10.88, 11.81. The pH was measured by the instructor beforehand with a WTW SenTix combined pH electrode connected to a WTW inoLab pH 740p high input impedance pH meter (Xylem Analytics Germany Sales GmbH \& Co. KG, Weilheim Germany), that was calibrated with three high accuracy pH buffers (4.00, 7.00, 10.00 at 20 $\celsius$, Scharlab,S.L. Barcelona, Spain). The glass and the tungsten filament electrodes were calibrated by measuring their potential against the internal reference electrode of the glass electrode in the buffer series. The potential values were recorded when the instrument indicated a steady reading. This ensured that they were taken at the same point of the response curve. The students then plotted the potential values as a function of the corresponding pH, and performed a linear regression using a commonly available open source spreadsheet program (LibreOffice). 
 
 
 \paragraph{Selectivity study.}
 
-Since the primary ion for the glass and the tungsten filament electrodes is already present in water at an activity that would influence the selectivity study, a buffer had to be used to lower the hydrogen ion activity. Most of the common pH buffers contain alkaline metals, and they could not be used to carry the selectivity study, because alkaline and alkaline earth metals are the most common interferences. For this reason, a pH = 8 TRIS buffer was used as a solvent to create the dilution series using KCl, NaCl, CaCl$_2$ and MgCl$_2$. In each cases, the activities ranged from 10$^{-6}$ M to 10$^{-1}$ M with tenfold increments in activity. The electrodes were immersed in each of the solutions and the resulting potential differences were measured and recorded with the already mentioned pH meter.
+The selectivity coefficient was determined using the \emph{,,separate solution method II (SSMII)''} \cite{buck1994recommendations}. Besides the pH buffer series, several other series of solutions (KCl, NaCl, CaCl$_2$ and MgCl$_2$) were prepared by the students, each containing an interfering ion. Since the primary ion for the glass and the tungsten filament electrodes is already present in water at an activity that would influence the selectivity study, a buffer had to be used to lower the hydrogen ion activity. Most of the common pH buffers contain alkaline metals, and they could not be used to carry the selectivity study, because alkaline and alkaline earth metals are the most common interferences. For this reason, a pH = 8 TRIS buffer was used as a solvent to create the dilution series using KCl, NaCl, CaCl$_2$ and MgCl$_2$. In each cases, the activities ranged from 10$^{-6}$ M to 10$^{-1}$ M with tenfold increments in activity. The electrodes were immersed in each of the solutions and the resulting potential differences were measured and recorded with the already mentioned pH meter. 
+
+To determine the selectivity coefficients, first the activities had to be calculated from the concentrations. This involved the calculation of activity coefficients which in turn required the calculation of ionic strength for each solution. This is an important step, and usually requires guidance from the laboratory instructor. To calculate the ionic strength, eq. \ref{ionic_strength} was used. Then the extended Debye-Hückel equation \ref{EDH} was applied to calculate the activity coefficients. To obtain the activities, concentrations have to be multiplied with the corresponding activity coefficients.
+
+To calculate the selectivity coefficient, a common potential was picked and the corresponding activity of the primary and interfering ions were calculated. The selectivity coefficient is then given by the ratio (SSMII):
+
+\begin{equation}
+k_{i,j} = \frac{a_i} {a_j^{z_i/z_j}}
+\end{equation}
+
+where $a_i$ and $a_j$ are the activities of the primary and interfering ion at the same potential, and $z_i$ and $z_j$ is the charge of the primary and interfering ions.
 
 \section{Hazards}
 When salvaging the tungsten filament from the lighbulb, care must be taken. The lightbulb must be wrapped several times in a cloth before it is hit with a mallet. Care must be taken when the filament is picked up from the broken pieces of glass. When the Plexiglass body is prepared, a saw is used to cut the groove, then superglue is used to enclose the filament in the groove. During these steps, close supervision of the students is necessary to avoid any harm. Lastly, HCl and NaOH is used during the preparation of the pH buffer series. If these get in contact with skin or the eye, flush with plenty of water for several minutes.
