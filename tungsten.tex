@@ -226,13 +226,13 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 	clip marker paths=true,
 	xtick = {0,1,2,3,4,5,6,7,8,9,10,11,12}, legend pos=north east, xminorticks=true, minor x tick num = 1]
 \addplot [only marks, domain=0:5.5, mark=*, color=red] table {data/calibration/izzo_h.txt};
-\addplot [only marks, domain=0:5.5, mark=*, color=blue] table {data/calibration/izzo_na.txt};
-\addplot [only marks, domain=0:5.5, mark=*, color=green] table {data/calibration/izzo_k.txt};
-\addplot [only marks, domain=0:5.5, mark=*, color=black] table {data/calibration/izzo_mg.txt};
-\addplot [only marks, domain=0:5.5, mark=*, color=purple] table {data/calibration/izzo_ca.txt};
+\addplot [domain=0:5.5, mark=*, color=blue] table {data/calibration/izzo_na.txt};
+\addplot [domain=0:5.5, mark=*, color=green] table {data/calibration/izzo_k.txt};
+\addplot [domain=0:5.5, mark=*, color=black] table {data/calibration/izzo_mg.txt};
+\addplot [domain=0:5.5, mark=*, color=purple] table {data/calibration/izzo_ca.txt};
 \addplot [domain=0:12, samples=500, line width=0.1mm] {0.895-x*40.05};
 \addlegendentry{H$^+$} 
-\addlegendentry{Na$^+$}
+\addlegendentry{Na$^+$}s
 \addlegendentry{K$^+$}
 \addlegendentry{Mg$^{2+}$}
 \addlegendentry{Ca$^{2+}$}
