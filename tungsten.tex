@@ -36,7 +36,7 @@ We demonstrate the fabrication of a simple and economical metal/metal--oxide typ
 
 The results presented in this paper are entirely based on measurements performed by 2nd year BSc Chemistry students, with electrodes that they have fabricated themselves. The students were easily engaged during the fabrications step, and they showed a high level of motivation later during the measurement and the evaluation steps.
 
-The aim of this paper is to avail teachers of an interesting and engaging experiment to teach students about pH, ion--selective electrodes their limitations.
+The aim of this paper is to avail teachers of an interesting and engaging experiment to teach students about pH and the properties and limitations of ion--selective electrodes.
 
 % of the earliest concepts of chemistry taught in school is pH. It is usually introduced during the discussion of acids and bases. Students are taught to detect the acidity of substances using pH indicators, usually in the form of indicator paper and eventually with a glass electrode.
 
@@ -119,6 +119,8 @@ This behaviour is described by the Nikolsky--equation that takes the effect of i
 E=E^\theta + \frac{RT}{z_iF} \ln \left [ a_i + \sum_{j} \left ( k_{ij}a_j^{z_i/z_j} \right ) \right ]
 \end{equation}
 
+where $E$ is the potential of the ion--selective electrode, $E^0$ is the standard potential, $R$ is the universal gas constant, $T$ is the thermodynamic temperature, $z_i$ and $z_j$ is the charge of the primary ion $i$ and interfering ion $j$, F is the Faraday constant, $a_i$ and $a_j$ is the activity of the primary ion $i$ and interfering ion $j$, $k_{ij}$ is the selectivity coefficient. Methods to determine the selectivity coefficients are derived from this equation, and the one used in this work is detailed in the \emph{,,Methods''} section.
+
 %economical instruments \cite{kubinova2015chemduino, grinias2016inexpensive, jin2018open}
 
 \section{Materials and Methods}
@@ -168,7 +170,7 @@ The pH values of the Britton--Robinson buffer series were first measured with a 
 Because of these alloying elements, the tungsten filament electrode was expected to be less selective towards hydrogen ions than the glass electrode. The selectivity study was performed in dilution series of KCl, NaCl, CaCl$_2$ and MgCl$_2$ from 10$^{-1}$ M to 10$^{-6}$ M with tenfold increases in concentration. A buffer was used to lower the hydrogen ion activity, and because most of the alkaline buffers contain an ion that interferes with hydrogen ion--selective electrodes, the TRIS buffer was selected at pH = 8.
 The measured potentials of the tungsten filament electrode for the interfering ions can be seen in Fig. \ref{fig:calibration}B. The electrodes showed remarkable selectivity towards hydrogen-ions. Only a slight increase in potential was observed at higher than 10$^{-4}$ M concentration. Below this concentration the potential corresponding to pH = 8 buffer was observed ($\approx$ -315 mV). Interestingly, K$^+$ caused the potential to decrease at higher concentration. This result was replicated several times. The selectivity coefficient values are summarized in Table \ref{table:selectivity}.
 
-IUPAC recommends the use of the separate solution (and also the \emph{,,fixed interference''}) method only if the electrode exhibits a Nernstian response to both the primary and the interfering ions \cite{buck1994recommendations}. With the fabricated tungsten electrode it is not the case. Within the used interfering ion activity range the tested ions interfere with the measurement only very slightly. The use of the method might be unjustified, and it could be simply stated instead that K$^+$, Na$^+$, Ca$^{2+}$ and Mg$^{2+}$ ions do not interfere significantly with the pH measurement under these conditions. Nevertheless, there \emph{is} a noticeable and reproducible interference, and the calculation of the selectivity coefficients is a good opportunity for the students to learn about the imperfections of ion--selective electrodes.
+IUPAC recommends the use of the separate solution (and also the \emph{,,fixed interference''}) method only if the electrode exhibits a Nernstian response to both the primary and the interfering ions \cite{buck1994recommendations}. With the fabricated tungsten electrode it is not the case. Within the used interfering ion activity range the tested ions interfere with the measurement only very slightly. Because the electrode performs so well, the use of the \emph{SSMII} method might be unjustified, and it could be simply stated instead that K$^+$, Na$^+$, Ca$^{2+}$ and Mg$^{2+}$ ions do not interfere significantly with the pH measurement under these conditions. Nevertheless, there \emph{is} a noticeable and reproducible interference, and the calculation of the selectivity coefficients is a good excercise for the students to learn about the imperfections of ion--selective electrodes.
 
 \begin{figure}[h!]
 \centering
@@ -221,6 +223,7 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \begin{axis}[
 	legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 	xmin=0.5, xmax=12,
+	%ymin=-500, ymax=-50,
 	width=7cm,height=7cm,
 	xlabel=pCATION, ylabel={E vs. Ag/AgCl/KCl(3 M) / mV},
 	clip marker paths=true,
@@ -232,6 +235,28 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \addplot [domain=0:5.5, mark=*, color=purple] table {data/calibration/izzo_ca.txt};
 \addplot [domain=0:12, samples=500, line width=0.1mm] {0.895-x*40.05};
 \addlegendentry{H$^+$} 
+\addlegendentry{Na$^+$}s
+\addlegendentry{K$^+$}
+\addlegendentry{Mg$^{2+}$}
+\addlegendentry{Ca$^{2+}$}
+\node[anchor=north east] at (rel axis cs:0.15,0.98) {B};
+\node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 40.05 mV / pH};
+\node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.997582};
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis}[
+	legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
+	xmin=0.5, xmax=9,
+	width=7cm,height=7cm,
+	xlabel=pCATION, ylabel={E vs. Ag/AgCl/KCl(3 M) / mV},
+	clip marker paths=true,
+	xtick = {0,1,2,3,4,5,6,7,8,9}, legend pos=north east, xminorticks=true, minor x tick num = 1]
+\addplot [domain=0:5.5, mark=*, color=blue] table {data/calibration/izzo_na.txt};
+\addplot [domain=0:5.5, mark=*, color=green] table {data/calibration/izzo_k.txt};
+\addplot [domain=0:5.5, mark=*, color=black] table {data/calibration/izzo_mg.txt};
+\addplot [domain=0:5.5, mark=*, color=purple] table {data/calibration/izzo_ca.txt};
 \addlegendentry{Na$^+$}s
 \addlegendentry{K$^+$}
 \addlegendentry{Mg$^{2+}$}
@@ -290,9 +315,9 @@ Mg$^{2+}$            & 6.17 $\cdot$ 10$^{-7}$
 
 \section{Conclusion}
 	
-The construction and usage of an economical pH sensitive electrode was presented that is highly selective towards hydrogen ions. It has been shown that the electrode performs very well, with a 40.05 mV / pH slope in the pH range 2--12. There was only a slight interference from K$^+$, Na$^+$, Mg$^{2+}$ and Ca$^{2+}$ ions that was enough to demonstate the imperfections of ion--selective electrodes.
+The construction and usage of an economical pH sensitive electrode was presented that is highly selective towards hydrogen ions. It has been shown that the electrode performs very well, with a 40.05 mV / pH slope in the pH range 2--12. There was only a slight interference from K$^+$, Na$^+$, Mg$^{2+}$ and Ca$^{2+}$ ions that was enough to determine the selectivity coefficients and demonstrate the imperfection of ion--selective electrodes.
 
-The potentiometric cell utilizing the electrode can be used as an engaging demonstration of the potentiometric determination of pH. The participating students showed high motivation during the electrode fabrication process. They were excited to use electrodes that they've prepared themselves to measure pH. As a result of the interactive demonstration and evaluation, they showed a deeper understanding of ion--selective potentiometry and spH.
+The potentiometric cell utilizing the electrode can be used as an engaging demonstration of the potentiometric determination of pH. The participating students showed high motivation during the electrode fabrication process and they were excited to use electrodes that they've prepared themselves to measure pH. As a result of the interactive demonstration and evaluation, they showed a deeper understanding of ion--selective potentiometry and pH.
 
 %The experiment has been carried out by 1st year chemistry BSc students with electrodes that they have prepared themselves.
 
