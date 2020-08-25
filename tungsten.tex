@@ -203,8 +203,8 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 		%legend style=draw=none, at={(0.5,-0.1)}, anchor=north
 		xmin=0,
 		xmax=660,
-		ymin=-500,
-		ymax=-50,
+		ymin=-540,
+		ymax=-30,
 		width=7cm,
 		height=7cm,
 		xlabel=t / s,
@@ -240,6 +240,7 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \node[anchor=north east] at (rel axis cs:0.15,0.98) {B};
 \node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 40.05 mV / pH};
 \node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.997582};
+\draw[dashed, color=gray] (axis cs:1,-340) -- (axis cs:9,-340) -- (axis cs:9,-285) -- (axis cs:1,-285) -- (axis cs:1,-340);
 \end{axis}
 \end{tikzpicture}
 
@@ -247,7 +248,7 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \begin{axis}[
 	legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 	xmin=0.5, xmax=9,
-	ymax=-280,
+	ymax=-285,
 	width=7cm,height=7cm,
 	xlabel=pCATION, ylabel={E vs. Ag/AgCl/KCl(3 M) / mV},
 	clip marker paths=true,
@@ -260,13 +261,12 @@ legend style={draw=none, at={(0.02,0.98)}, anchor=north west},
 \addlegendentry{K$^+$}
 \addlegendentry{Mg$^{2+}$}
 \addlegendentry{Ca$^{2+}$}
-\node[anchor=north east] at (rel axis cs:0.15,0.98) {B};
-\node[anchor=south west] at (rel axis cs:0,0) {$\Delta$ S = 40.05 mV / pH};
-\node[anchor=south west] at (rel axis cs:0,0.1) {R$^2$ = 0.997582};
+\node[anchor=north east] at (rel axis cs:0.15,0.98) {C};
+
 \end{axis}
 \end{tikzpicture}
 
-\caption{Calibration and selectivity study of the glass electrode (A), and the tungsten filament electrode (B).}
+\caption{Calibration and selectivity study of the glass electrode (A), and the tungsten filament electrode (B). (C)}
 \label{fig:calibration}
 \end{figure}
 
